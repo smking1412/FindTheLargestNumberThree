@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nhập vào 1 dãy số tự nhiên,\nphân tách bởi dấu phẩy"
+        android:layout_margin="20dp"
+        android:textSize="30sp"
+        android:maxLines="2"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_number"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:visibility="gone"
+        android:layout_margin="20dp"/>
+
+    <RelativeLayout
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_edt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <EditText
+            android:id="@+id/edt_number"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:singleLine="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="50dp"
+            android:background="@null"
+            android:hint="Vd:1,4,6,2,8" />
+
+        <ImageButton android:id="@+id/btn_submit"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/edt_number"
+            android:layout_alignBottom="@+id/edt_number"
+            android:layout_alignRight="@+id/edt_number"
+            android:background="@drawable/bg_edt"
+            android:src="@drawable/ic_done"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Hiển thị số lớn thứ 3 của dãy"/>
+</LinearLayout>
